@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea y guarda un horario semanal para organizar las tareas de limpieza de casa.">
+    <title>Horario de limpieza | Hogar en equilibrio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/horario.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">Hogar en equilibrio</a>
+        <nav aria-label="Navegación principal">
+            <a href="horario.html" aria-current="page">Horario de limpieza</a>
+            <a href="trucos.html">Trucos de limpieza</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Planifica a tu ritmo</p>
+            <h1>Tu horario de limpieza</h1>
+            <p>Reparte las tareas por días para tener un plan claro y evitar repetir siempre lo mismo. Tu horario se guarda en este navegador.</p>
+        </section>
+
+        <section class="panel" aria-labelledby="add-task-title">
+            <h2 id="add-task-title">Añadir una tarea</h2>
+            <p class="form-help">Elige un día y escribe qué quieres hacer. Puedes añadir varias tareas a cada día.</p>
+            <form class="task-form" id="task-form">
+                <div class="field">
+                    <label for="task-day">Día de la semana</label>
+                    <select id="task-day" name="day" required>
+                        <option value="lunes">Lunes</option>
+                        <option value="martes">Martes</option>
+                        <option value="miercoles">Miércoles</option>
+                        <option value="jueves">Jueves</option>
+                        <option value="viernes">Viernes</option>
+                        <option value="sabado">Sábado</option>
+                        <option value="domingo">Domingo</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="task-name">Tarea</label>
+                    <input id="task-name" name="task" type="text" maxlength="80" placeholder="Por ejemplo: limpiar el baño" required>
+                </div>
+                <button class="button" type="submit">Añadir al horario</button>
+            </form>
+            <p class="status-message" id="status-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="schedule-section" aria-labelledby="week-title">
+            <div class="schedule-heading">
+                <div>
+                    <h2 id="week-title">Plan de la semana</h2>
+                    <p id="task-count">Aún no has añadido tareas.</p>
+                </div>
+                <button class="clear-button" id="clear-schedule" type="button">Vaciar horario</button>
+            </div>
+            <div class="week-grid" id="week-grid" aria-live="polite"></div>
+        </section>
+
+        <a class="back-link" href="index.html">← Volver al inicio</a>
+    </main>
+
+    <footer class="site-footer">
+        <p>Un plan flexible funciona mejor que uno perfecto.</p>
+    </footer>
+</body>
+</html>

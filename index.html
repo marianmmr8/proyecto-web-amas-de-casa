@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amas de casa</title>
+    <meta name="description" content="Organiza las tareas de casa y descubre trucos sencillos para limpiar mejor.">
+    <title>Hogar en equilibrio</title>
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 <body>
-    <container id="contenedor">
-    <h1>Amas de casa</h1>
-    <div  id="bienvenida">
+    <header class="site-header">
+        <a class="brand" href="index.html">Hogar en equilibrio</a>
+        <nav aria-label="Navegación principal">
+            <a href="horario.html">Horario de limpieza</a>
+            <a href="trucos.html">Trucos de limpieza</a>
+        </nav>
+    </header>
 
-    <p>Bienvenidas al mundo de las amas de casa</p>
-    <p>¿Cuantas veces hemos sentido que nuestra vida se reduce a un ciclo interminable de tareas domésticas?</p>
-    <p>Es hora de romper con esa rutina y descubrir nuevas formas de disfrutar nuestra vida cotidiana.</p>
-    <p>Con este guide, aprenderás a transformar tu hogar en un espacio que refleje tu estilo de vida y te haga sentir bienvenida todos los días.</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Un hogar cuidado, a tu manera</p>
+                <h1>Haz espacio para disfrutar de tu casa</h1>
+                <p class="hero-copy">Organiza las tareas poco a poco, reparte la limpieza durante la semana y encuentra ideas sencillas para que cuidar tu hogar no se convierta en una rutina interminable.</p>
+                <div class="hero-actions">
+                    <a class="button" href="horario.html">Organizar mi semana</a>
+                    <a class="button button-secondary" href="trucos.html">Ver trucos de limpieza</a>
+                </div>
+            </div>
+            <img class="hero-image" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Persona limpiando una superficie de la casa" fetchpriority="high">
+        </section>
 
-    </div>
-  </container>
+        <section class="feature-grid" aria-label="Herramientas para tu hogar">
+            <article class="feature-card">
+                <img class="feature-image" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&amp;fit=crop&amp;w=700&amp;q=75" alt="Cocina luminosa y ordenada" loading="lazy">
+                <h2>Planifica sin repetir</h2>
+                <p>Asigna tareas a distintos días, consulta tu plan semanal y guárdalo para volver a él cuando quieras.</p>
+                <a class="text-link" href="horario.html">Crear un horario <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="feature-card">
+                <img class="feature-image" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&amp;fit=crop&amp;w=700&amp;q=75" alt="Baño limpio y luminoso" loading="lazy">
+                <h2>Descubre nuevas ideas</h2>
+                <p>Encuentra consejos fáciles para distintas zonas de casa y pequeños hábitos que simplifican la limpieza.</p>
+                <a class="text-link" href="trucos.html">Explorar los trucos <span aria-hidden="true">→</span></a>
+            </article>
+        </section>
+    </main>
 
-
-
-
-
-
+    <footer class="site-footer">
+        <p>Pequeños pasos también hacen un hogar acogedor.</p>
+    </footer>
 </body>
 </html>

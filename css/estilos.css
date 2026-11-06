@@ -292,7 +292,9 @@ h1 {
 .field select:focus,
 .button:focus-visible,
 a:focus-visible,
-.remove-task:focus-visible {
+.task-action:focus-visible,
+.task-edit-input:focus,
+.task-day-select:focus-visible {
     outline: 3px solid #e8a68b;
     outline-offset: 3px;
 }
@@ -383,23 +385,82 @@ a:focus-visible,
 
 .day-card li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
     color: #4c625b;
     font-size: 0.94rem;
 }
 
-.remove-task {
+.day-card li > span {
+    flex: 1 1 100%;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.task-action {
     flex: 0 0 auto;
-    padding: 3px 7px;
+    padding: 4px 8px;
     border: 0;
     border-radius: 6px;
-    background: #f8ece6;
-    color: #8b4036;
     font: inherit;
     font-size: 0.8rem;
     cursor: pointer;
+}
+
+.task-edit-form {
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 6px;
+}
+
+.task-edit-input {
+    flex: 1 1 140px;
+    min-width: 0;
+    min-height: 32px;
+    padding: 4px 6px;
+    border: 1px solid #cbd5cd;
+    border-radius: 6px;
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.8rem;
+}
+
+.edit-day,
+.save-day {
+    background: #e8f0e9;
+    color: var(--green-dark);
+}
+
+.cancel-edit {
+    background: #f0f1ef;
+    color: #4c625b;
+}
+
+.task-day-select {
+    min-height: 32px;
+    max-width: 100%;
+    padding: 4px 6px;
+    border: 1px solid #cbd5cd;
+    border-radius: 6px;
+    background: white;
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.8rem;
+}
+
+.remove-task {
+    background: #f8ece6;
+    color: #8b4036;
 }
 
 .empty-day {
